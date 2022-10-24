@@ -3,10 +3,11 @@
 #include <time.h>
 
 /**
- * Main - The starting pount of the programme
+ * main - The entry point of the programme
  *
- * Description - The programme returns a random value each time
- * it is ran
+ * Description: Gets a random number and prints it out
+ * and if it is negative, positive or zero
+ *
  *
  * Return: return 0
  *
@@ -20,9 +21,9 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
 		printf("%d is positive\n", n);
-	else if (n == 0)
-		printf("%d is zero", n);
+	else if (n < 0)
+		printf("%d is negative\n", n);
 	else
-		printf("\n %d is negative", n);
+		printf("%d is zero", n);
 	return (0);
 }
