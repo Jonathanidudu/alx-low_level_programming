@@ -3,13 +3,11 @@
 #include <time.h>
 
 /**
- * main - The entry point of the programme
+ *main - the entry point of the programme
  *
- * Description: Gets a random number and prints it out
- * and if it is negative, positive or zero
+ *Description: prints the value of random number
  *
- *
- * Return: return 0
+ *Return: return (0);
  *
  */
 
@@ -19,10 +17,13 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+
 	if (n > 0)
 		printf("%d is positive\n", n);
+
 	else if (n < 0)
 		printf("%d is negative\n", n);
+
 	else
 		printf("%d is zero\n", n);
 	return (0);
